@@ -1,0 +1,141 @@
+:root {
+    --bleu: #004aad;
+    --bleu-ciel: #7ec8e3;
+    --vert: #3fa34d;
+    --marron: #8b5e3c;
+    --blanc: #ffffff;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--blanc);
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bleu);
+    color: white;
+    padding: 10px 20px;
+}
+
+.logo span { color: var(--vert); }
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 1.8em;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(var(--bleu-ciel), var(--blanc));
+}
+
+/* Produits */
+.produits {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.produit {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+
+.produit img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+button {
+    background-color: var(--vert);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--marron);
+}
+
+/* Paiement & Partenaires */
+.paiement, .partenaires {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f0f8ff;
+}
+
+.logos img {
+    height: 60px;
+    margin: 10px;
+}
+
+/* Contact */
+.contact {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+    gap: 10px;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: var(--bleu);
+    color: white;
+    padding: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        background-color: var(--bleu);
+    }
+    .navbar ul.active {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block;
+    }
+}
